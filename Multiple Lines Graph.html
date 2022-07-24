@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Multiple lines graph</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <div id='myplot' style="width:100%">
+        </div>
+        <script>
+            //your values of x and y
+        var xvalues1=[]
+        var yvalues1=[]
+        var xvalues2=[]
+        var yvalues2=[]
+        var xvalues3=[]
+        var yvalues3=[]
+        var y1='4*x +12'
+        var y2='3*x'
+        var y3='2*x +3'
+        for(let x=0;x<=5;x++){
+            xvalues1.push(x);
+            yvalues1.push(eval(y1));
+            xvalues2.push(x);
+            yvalues2.push(eval(y2));
+            xvalues3.push(x);
+            yvalues3.push(eval(y3));
+        }
+        //define how x and y axis will be like
+        var data=[{x:xvalues1,y:yvalues1,mode:'lines'},{x:xvalues2,y:yvalues2,mode:'lines'},{x:xvalues3,y:yvalues3,mode:'lines'}]
+        //define layout
+        var layout={title:'y='+y1+' ' +'y='+y2+' '+'y='+y3}
+        //use Plotly to display graph
+        Plotly.newPlot('myplot',data,layout)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <title>Pie Chart</title>
+    </head>
+    <body>
+        <div id='myplot'></div>
+        <script>
+            var xvalues=['Rice','Beans','Yam','Milk']
+            var yvalues=[90,40,20,25]
+            //define data
+            var data=[{labels:xvalues,values:yvalues,type:'pie'}]
+            //define layout
+            var layout={title:'Food consumption'}
+            Plotly.newPlot('myplot',data,layout)
+        </script>
+    </body>
+</html>
