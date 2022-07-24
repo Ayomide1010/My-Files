@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <title>Bar Chart</title>
+    </head>
+    <body>
+        <div id='myplot'>
+        </div>
+        <script>
+            var xvalues=['Rice','Beans','Yam','Milk']
+            var yvalues=[90,40,20,25]
+    //define your data
+    var data=[{x:xvalues,y:yvalues,type:'bar'}]
+    //define layout
+    var layout={yaxis:{range:[0,100]},title:"Food consumption"} 
+    //use Plotly to display
+    Plotly.newPlot('myplot',data,layout)
+        </script>
+    </body>
+</html>
